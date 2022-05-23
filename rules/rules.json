@@ -1,7 +1,6 @@
 {
     "color": "#FBCEB1",
-    "title": "Rules:",  
-    "description": "Those who do not follow will be warned or muted, but will be banned if this becomes to excessive.", 
+    "title": "Rules:",
     "fields": [
         {
             "name": "1. Always pay respect.", 
