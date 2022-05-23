@@ -1,0 +1,18 @@
+{
+  "name": "baguette-bot",
+  "version": "1.0.0",
+  "description": "a baguette bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node deploy-commands.js && node index.js"
+  },
+  "author": "scripto_entity_1010",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@discordjs/rest": "^0.4.1",
+    "discord-api-types": "^0.32.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.1"
+  }
+}

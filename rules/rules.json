@@ -1,0 +1,31 @@
+{
+    "color": "#FBCEB1",
+    "title": "Rules:",  
+    "description": "Those who do not follow will be warned or muted, but will be banned if this becomes to excessive.", 
+    "fields": [
+        {
+            "name": "1. Always pay respect.", 
+            "value": "We don't want assholes here."
+        }, 
+        {
+            "name": "2. Absolutely no NSFW content.",
+            "value": "This is a SFW server!"
+        }, 
+        {
+            "name": "3. Speak in English only.", 
+            "value": "This server is for all people around the world. So please speak in english in order for us to understand each other."     
+        }, 
+        {
+            "name": "4. Don't ask members for their personal information and no DOXXING.",
+            "value": "We value other's personal info so please don't do this."
+        },
+        {
+            "name": "5. Don't ping staff.",
+            "value": "In case you see someone violating the rules, report to modmail instead."
+        }, 
+        {
+            "name": "6. Follow Discord's TOS.",
+            "value": "Because why not."
+        }
+    ]
+}

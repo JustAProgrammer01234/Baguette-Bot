@@ -1,0 +1,19 @@
+{
+    "color": "#FBCEB1",
+    "title": "Staff rules:",  
+    "description": "Those who do not follow will be demoted!", 
+    "fields": [
+        {
+            "name": "1. DO NOT ABUSE YOUR POWER.", 
+            "value": "Great power comes with great responsibility."
+        }, 
+        {
+            "name": "2. Take action ASAP when someone violates the rules, contact the owner (which is me) when things go out of hand.",
+            "value": "We wouldn't want a chaotic server right?"
+        }, 
+        {
+            "name": "3. Be mature and respectful.", 
+            "value": "You're one of the staff, at least be a role model to the users."
+        }
+    ]
+}
