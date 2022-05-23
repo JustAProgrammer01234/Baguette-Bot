@@ -21,11 +21,15 @@
         },
         {
             "name": "5. Don't ping staff.",
-            "value": "In case you see someone violating the rules, report to modmail instead."
+            "value": "In case you see someone violating the rules, report to modmail instead. Otherwise if you're just doing that for trolling then you will get punished."
         }, 
         {
-            "name": "6. Follow Discord's TOS.",
-            "value": "Because why not."
+            "name": "6. No politics and religious discussions.", 
+            "value": "This is a hangout server, not a politics or a religious discord server. Plus it's annoying."
+        }, 
+        {
+            "name": "7. Follow Discord's TOS.",
+            "value": "Read more about Discord's TOS here:\nhttps://discord.com/terms\nhttps://discord.com/guidelines"            
         }
     ]
 }
