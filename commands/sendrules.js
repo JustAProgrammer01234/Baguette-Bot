@@ -1,5 +1,6 @@
 const rules = require("../rules/rules.json")
 const staff_rules = require("../rules/staffrules.json")
+const consequences = require("../rules/dontfollow.json")
 const { SlashCommandBuilder } = require("@discordjs/builders")
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
             await interaction.reply({ content: "That isn't a text channel smfh.", ephemeral: true })
             return 
         }
-        await channel.send({ embeds: [rules, staff_rules] })
+        await channel.send({ embeds: [rules, staff_rules, consequences] })
         await interaction.reply(`Successfully sent rules to ${channel}`)
     }
 }
