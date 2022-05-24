@@ -7,11 +7,11 @@ module.exports = {
     data: new SlashCommandBuilder()
             .setName("sendrules")
             .setDescription("Sends rules to a specific channel.")
-            .addChannelOption(option => {
-                return option.setName("channel")
+            .addChannelOption(option => 
+                option.setName("channel")
                     .setDescription("The channel to send the rules.")
                     .setRequired(true)
-            }),
+            ),
     execute: async interaction => {
         const channel = interaction.options.getChannel("channel")
         if (!channel.isText()) {

@@ -7,7 +7,7 @@ const baguette_bot = new Client({ intents: [Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGE_REACTIONS, 
         Intents.FLAGS.GUILD_MEMBERS
     ]})
-const commands = new Collection(); 
+const commands = new Collection()
 
 for (const cmd of fs.readdirSync('./commands')) {
     const command = require(`./commands/${cmd}`)
