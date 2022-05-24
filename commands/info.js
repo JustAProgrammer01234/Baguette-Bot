@@ -10,7 +10,7 @@ module.exports = {
                 .setDescription("choose shit")
                 .setRequired(true)
                 .addChoices(
-                    {name: "Guild", value: "guild"},
+                    {name: "This server", value: "guild"},
                     {name: "Member", value: "member"},
                     {name: "Bot", value: "bot"}
                 )
