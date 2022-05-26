@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, time } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js")
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,13 +11,14 @@ module.exports = {
                 .setRequired(true)
                 .addChoices(
                     {name: "This server", value: "guild"},
-                    {name: "Member", value: "member"},
-                    {name: "Bot", value: "bot"}
+                    {name: "Bot", value: "bot"}, 
+                    {name: "Member", value: "member"}
                 )
         ), 
     execute: async interaction => {
         const option = interaction.options.getString("option")
         const embed = new MessageEmbed()
+        const message = {}
 
         embed.setColor("#FBCEB1")
 
@@ -43,16 +44,27 @@ module.exports = {
                     {name: "Members:", value: `Users: ${users}\nBots: ${bots}\nTotal: ${guild.memberCount}`, inline: true}, 
                     {name: "Channels:", value: `Text Channels: ${text_channels}\nVoice Channels: ${voice_channels}\nCategory Channels: ${category_channels}\nTotal: ${guild.channels.channelCountWithoutThreads}`, inline: true}
                 )
+                message.embeds = [ embeds ]
                 break 
+            case "bot":
+                const row = new MessageActionRow()
+                    .addComponents(
+                        new MessageButton()
+                            .setLabel("Source")
+                            .setStyle("LINK")
+                            .setURL("https://github.com/JustAProgrammer01234/Baguette-Bot")
+                    )
+                embed.setTitle("Just some info about this bot ;)")
+                embed.setDescription("Totally info right here.")
+                message.embeds = [ embed ]
+                message.components= [ row ]
+                break  
             case "member":
                 embed.setTitle("a")
                 embed.setDescription("b")
+                message.embeds = [ embed ]
                 break 
-            case "bot":
-                embed.setTitle("a")
-                embed.setDescription("b")
-                break  
         }
-        await interaction.reply({ embeds: [ embed ] })
+        await interaction.reply(message)
     }
 }
