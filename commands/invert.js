@@ -1,6 +1,4 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const canvas = require("@napi-rs/canvas")
-const { request } = require("undici")
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,6 +9,6 @@ module.exports = {
                 .setDescription("the member to invert pfp")
         }), 
     execute: async interaction => {
-        await interaction.reply("invert image")
+        await interaction.reply("Still in development!")
     }
 }

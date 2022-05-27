@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, time } = require("@discordjs/builders")
+const { SlashCommandBuilder, time, inlineCode } = require("@discordjs/builders")
 const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js")
 
 module.exports = {
@@ -11,8 +11,7 @@ module.exports = {
                 .setRequired(true)
                 .addChoices(
                     {name: "This server", value: "guild"},
-                    {name: "Bot", value: "bot"}, 
-                    {name: "Member", value: "member"}
+                    {name: "This bot", value: "bot"}
                 )
         ), 
     execute: async interaction => {
@@ -44,9 +43,10 @@ module.exports = {
                     {name: "Members:", value: `Users: ${users}\nBots: ${bots}\nTotal: ${guild.memberCount}`, inline: true}, 
                     {name: "Channels:", value: `Text Channels: ${text_channels}\nVoice Channels: ${voice_channels}\nCategory Channels: ${category_channels}\nTotal: ${guild.channels.channelCountWithoutThreads}`, inline: true}
                 )
-                message.embeds = [ embeds ]
+                message.embeds = [ embed ]
                 break 
             case "bot":
+                const bot = interaction.client 
                 const row = new MessageActionRow()
                     .addComponents(
                         new MessageButton()
@@ -54,16 +54,16 @@ module.exports = {
                             .setStyle("LINK")
                             .setURL("https://github.com/JustAProgrammer01234/Baguette-Bot")
                     )
+
                 embed.setTitle("Just some info about this bot ;)")
-                embed.setDescription("Totally info right here.")
+                embed.setThumbnail(bot.user.avatarURL())
+                embed.addFields(
+                    {name: "Was ready at:", value: time(bot.readyAt, "F")},
+                    {name: "Latency:", value: inlineCode(`${bot.ws.ping}ms`)}
+                )
                 message.embeds = [ embed ]
                 message.components= [ row ]
                 break  
-            case "member":
-                embed.setTitle("a")
-                embed.setDescription("b")
-                message.embeds = [ embed ]
-                break 
         }
         await interaction.reply(message)
     }
