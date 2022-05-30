@@ -1,5 +1,5 @@
 # Baguette Bot
-A discord bot built for my discord server. 
+A discord bot built for my [discord server](https://discord.gg/rZzKYBAdUp). 
 
 ## Make sure you hav a .env file before you test this.
 **.env file format:**
