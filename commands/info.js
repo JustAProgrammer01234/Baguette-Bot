@@ -4,7 +4,7 @@ const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js")
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("info")
-        .setDescription("Gets info from a member, this server, or the bot itself.")
+        .setDescription("Gets info from this server or the bot itself.")
         .addStringOption(option =>
             option.setName("option")
                 .setDescription("choose an option")
