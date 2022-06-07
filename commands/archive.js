@@ -9,8 +9,8 @@ module.exports = {
             await interaction.reply({ content: "This isn't a thread!", ephemeral: true})
             return 
         }
-        await interaction.channel.setLocked(true)
+
+        await interaction.reply("Archiving thread.")
         await interaction.channel.setArchived(true)
-        await interaction.reply("Successfully archived thread.")
     }
 }

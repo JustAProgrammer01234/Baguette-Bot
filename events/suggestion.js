@@ -15,6 +15,7 @@ module.exports = {
 			reason: "Someone suggested a thing."
 		})
 		
-		await thread.join(); 
+		await thread.join()
+		await thread.setLocked(true)
     }
 };
